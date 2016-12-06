@@ -8,6 +8,9 @@ include('fonctions.php');
 include('source.php');
 
 //echo $_GET['planete'];
+echo '<pre>';
+var_dump($aAccount);
+echo '</pre>';
 ?>
 <head>
 
@@ -67,12 +70,13 @@ foreach ($aMenu as $key => $value) {
 				<select name="account">
 					<?php
 					foreach ($aAccount as $key => $value) {
-
-						if($key==$accountSelected){
-							echo '<option selected value="'.$key.'">'.$aAccount[$key].'</option>' ;
-						}
-						else{
-							echo '<option value="'.$key.'">'.$aAccount[$key].'</option>' ;
+						foreach ($aAccount[$key] as $subkey => $subvalue){
+							if($subvalue==$accountSelected){
+								echo '<option selected id="'.$key.'" value="'.$subvalue.'">'.$subvalue.' ['.$key.']</option>' ;
+							}
+							else{
+								echo '<option id="'.$key.'" value="'.$subvalue.'">'.$subvalue.' ['.$key.']</option>' ;
+							}
 						}
 					}
 					?>
