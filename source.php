@@ -68,7 +68,7 @@ $aMenu = array(
 	1 => array('timeNeed','Temps nécessaire'),
 	2 => array('satelliteNeed','Nb Satellites'),
 	3 => array('defensePossible','Nb Défense'),
-	4 => array('vaisseauPosible','Nb vaisseau'),
+	4 => array('vaisseauPossible','Nb vaisseau'),
 	5 => array('endTime','Heure de fin'),
 	6 => array('needPT','Nb Transporteur')
 	);
@@ -332,10 +332,12 @@ if (isset($resourceToFret)){
 	if($_POST['typeTransport']==1){
 		$needPT = ceil(($resourceToFret)/5000);
 		$typeTransport = 1;
+		$excedant = ($needPT*5000) - $resourceToFret;
 	}
 	elseif ($_POST['typeTransport']==2) {
 		$needPT = ceil(($resourceToFret)/25000);
 		$typeTransport = 2;
+		$excedant = ($needPT*25000) - $resourceToFret;
 	}
 }
 

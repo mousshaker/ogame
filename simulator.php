@@ -608,6 +608,7 @@ foreach ($aMenu as $key => $value) {
 						}
 						echo '</font> nécessaires </br>';
 						echo '<div class="resultFocus">'.$needPT.'</div>';
+						echo '<div class="childResult">Excédant : '.numFormat($excedant).'</div>';
 					}
 					?>
 				</div>	
