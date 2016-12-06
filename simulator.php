@@ -7,10 +7,7 @@ include('fonctions.php');
 #inclusion des calculs sources
 include('source.php');
 
-//echo $_GET['planete'];
-echo '<pre>';
-var_dump($aAccount);
-echo '</pre>';
+
 ?>
 <head>
 
