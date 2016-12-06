@@ -15,14 +15,11 @@ $prodH = $_POST['prodH'];
 $stock = $_POST['stock'];
 $need = $_POST['need'];
 $energy = $_POST['energy'];
-//$satProd = $_POST['satProd'];
+
 
 $aResourceType  = array('METAL','CRISTAL','DEUT');
 $aResourceTypeShort = array('m','c','d');
-/*
-$aResourceType  = array('METAL','CRISTAL','DEUT','VALIUM');
-$aResourceTypeShort = array('m','c','d','v');
-*/
+
 
 $aAccount = array('Eanae','Emphurio');
 
@@ -46,7 +43,6 @@ while ($i <= 31){
     $i++;
 }
 //$aPlanete = array(array(NomPlanete,Coordonnées,nomJoueur,Serveur,Vitesse Prod,TempMax,urlImage,nbCase,prodSatellite))
-// Eanurn : gf3.geo.gfsrv.net/cdn87/0ffda2f18430e811c30d68b5aa84fb.png
 $urlImgBg = 'https://s144-fr.ogame.gameforge.com/headerCache/station/';
 $aPlanete = array(
 	0 => array('EnunE','[4:28:9]','0','144','3','32','gf1.geo.gfsrv.net/cdnfa/bcb9c1fd9e0fe970c82ea66f7a3400.png',$urlImgBg.'normal.jpg','227','28'),
@@ -148,8 +144,6 @@ $aVaisseau = array(
 	$satProd = $aPlanete[$planeteKey][9];
 
 
-
-
 ## STOCK ##
 	#Enregistrement des valeurs de stock soumises #
 	foreach ($aResourceTypeShort as $key => $value) {
@@ -213,12 +207,6 @@ $aVaisseau = array(
 			$stockRemaining[$key] = $currenStock[$key]-($aVaisseau[$typeVaisseau][$key+1]*min($nbVaisseauWith));
 		}
 	}
-
-
-
-
-
-
 
 
 ## CALCUL du nb de SATELLITE nécessaires ##
@@ -299,15 +287,6 @@ $aVaisseau = array(
 
 
 
-
-
-/*
-$prodH = array();
-foreach ($aResourceTypeShort as $key => $value) {
-	$prodH[$key] = wLogRead($dataPathGlobal,'prodH'.$value.$planeteKey);
-}
-*/
-
 ## LEVEL des MINES ##
 	$level_mine = array();
 	foreach ($aResourceTypeShort as $key => $value) {
@@ -335,9 +314,6 @@ foreach ($aResourceTypeShort as $key => $value) {
 	}
 
 
-
-
-
 ## TRANSPORTEURS #
 
 # Calcul du nb de Transporteurs recommandés #
@@ -346,7 +322,6 @@ $recoGT = ceil(($totalProdJ*1.2)/25000);
 
 $PTneed = ceil(($totalCurrentStock*1.2)/5000);
 $GTneed = ceil(($totalCurrentStock*1.2)/25000);
-
 
 
 # Calcul du nombre de PT en fonction des resources #
@@ -365,7 +340,6 @@ if (isset($resourceToFret)){
 }
 
 
-
 # calculs stock futur #
 $futurStock = array();
 foreach ($aResourceTypeShort as $key => $value) {
@@ -382,12 +356,6 @@ foreach ($aResourceTypeShort as $key => $value) {
 	}
 	
 }
-
-
-
-
-
-
 
 
 

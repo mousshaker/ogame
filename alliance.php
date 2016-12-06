@@ -1,6 +1,9 @@
 <?php
 //phpinfo();
 // code by mousshk@gmail.com
+/*
+* Si la configuration de votre serveur n'est pas adaptée gardez ce fichier en local
+*/
 header('Content-Type: text/html; charset=utf-8');
 date_default_timezone_set("Europe/Paris");
 #inclusion des fonctions
@@ -23,7 +26,7 @@ include('source.php');
 </head>
 
 <?php
-$timeStamp ="1478702500";
+$timeStamp ="1478702500"; # on le trouve dans le fichier playerData.xml
 $duree = 7;
 $dateNexUpdate = date('d/m/Y', strtotime('+'.$duree.'day', $timeStamp ));
 if($timeStamp !=""){
@@ -37,8 +40,7 @@ if($timeStamp !=""){
  
 						
 
-#Info sur un joueur ciblé
-//ID du joueur
+### Info sur un joueur ciblé ###
 ?>
 <div class="menuHead">
 <?php
@@ -96,10 +98,7 @@ echo '<a href="https://s144-fr.ogame.gameforge.com/api/playerData.xml?id=100178"
 </div>
 
 
-
-
-
-
+<!-- Tableau d'alliance -->
 <div style="overflow-x:auto;" id="alliance" name="player" class="panelDark">
 	<div id="Title" class="headPanelTitle">
 		<h2>Alliance</h2>
@@ -122,7 +121,6 @@ foreach ($xmlAll->player as $value) {
 		//echo $value['name'].' ('.$value['id'].')<br>';
 		$idPlayer[] = array($value['id'],$value['name']);
 	}
-	
 }
 
 echo '<table><tr><td>Joueurs</td>';
@@ -150,7 +148,6 @@ echo '</tr>';
 
 echo '</table>';
 ?>
-
 </div>
 <div class="footer">
 	@Mousshk - 2016
