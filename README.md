@@ -4,6 +4,10 @@ Cette application n'a pas pour but de remplacer les divers simulateurs déjà ex
 L'application est responsive et s'adapte donc au format mobile.
 <br><br>
 
+<h2> Prérequis </h2>
+Avoir un serveur hébergeur ou bien un hôte virtuel local (auquel cas l'application ne sera pas accessible via smartphone, en toute logique).
+
+<h2>Outils de l'application </h2>
 - Mode empire (mise à jour manuel du niveau des Mines mais calcul auto de la production Heure et Jour)
 - Calcul d'un stock futur en fonction du stock actuel renseigné et de la production/H de la resource
 - Calcul du temps nécessaire pour obtenir une resource donnée en fonction du stock actuel renseigné et de la production/H de la resource
