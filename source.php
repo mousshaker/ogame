@@ -27,15 +27,6 @@ $aAccount = array(
 	143 =>array('Aenea')
 	);
 
-$serverNumber = 144; # ID de votre serveur (Uni) - utile pour la page Alliance.
-$idPlayer = 102129; # votre ID de joueur - utile pour la page Alliance. 102129 100178
-
-$xmlPlayer = simplexml_load_file('https://s'.$serverNumber.'-fr.ogame.gameforge.com/api/playerData.xml?id='.$idPlayer);
-foreach ($xmlPlayer->alliance as $value) {
-	$idAlliance = $value['id']; # va chercher l'ID de votre alliance
-	$alliance = strval($idAlliance);
-}
-
 
 ## Enregistrement du COMPTE ##
 if (isset($_POST['account'.$planeteKey])){
