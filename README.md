@@ -1,11 +1,15 @@
-# ogame
+# Ogame application
 Application d'aide pour le jeu online ogame.<br>
 Cette application n'a pas pour but de remplacer les divers simulateurs déjà existant.<br>
 L'application est responsive et s'adapte donc au format mobile.
 <br><br>
 
 <h2> Prérequis </h2>
-Avoir un serveur hébergeur ou bien un hôte virtuel local (auquel cas l'application ne sera pas accessible via smartphone, en toute logique).
+Avoir un serveur hébergeur ou bien un hôte virtuel local (auquel cas l'application ne sera pas accessible via smartphone, en toute logique).<br>
+Savoir lire un minimum le HTML et éventuellement un peu le PHP (pour pouvoir remplacer quelques données dans le fichier "source.php").
+
+<h2> Installation </h2>
+Copiez tout simplement tel quel l'ensemble des fichiers du dépôt dans votre racine serveur/localhost.
 
 <h2>Outils de l'application </h2>
 - Mode empire (mise à jour manuel du niveau des Mines mais calcul auto de la production Heure et Jour)

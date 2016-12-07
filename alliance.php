@@ -36,9 +36,6 @@ if($timeStamp !=""){
 	echo '<div class="infoStandard center">(Prochaine MAJ le '.$dateNexUpdate.')</div>';
 
 }
-
-$serverNumber = 144; # ID de votre serveur (Uni)
-$idPlayer = 100178; # votre ID de joueur
 						
 
 ?>
@@ -108,7 +105,8 @@ $idPlayer = 100178; # votre ID de joueur
 		<?php
 		$xmlPlayer = simplexml_load_file('https://s'.$serverNumber.'-fr.ogame.gameforge.com/api/playerData.xml?id='.$idPlayer);
 		foreach ($xmlPlayer->alliance as $value) {
-			echo '<font class="infoStandard">'.$value->name.' ['.$value->tag.'] ';
+			echo '<font class="infoStandard">'.$value->name.' ['.$value->tag.'] - ID : '.$idAlliance.'</font>';
+
 		}
 		?>
 	</div>
@@ -116,24 +114,34 @@ $idPlayer = 100178; # votre ID de joueur
 
 ## INFOS ALLIANCE ##
 $idPlayer = array();
-$idAlliance = 27; # remplaçer par l'ID de votre alliance
+
 $xmlAll = simplexml_load_file('https://s'.$serverNumber.'-fr.ogame.gameforge.com/api/players.xml');
 foreach ($xmlAll->player as $value) {
-	if($value['alliance']==$idAlliance){
-		//echo $value['name'].' ('.$value['id'].')<br>';
-		$idPlayer[] = array($value['id'],$value['name']);
+	if($idAlliance > 0){
+		if($value['alliance']==$alliance){
+			# On affiche tous les joueurs de l'Alliance
+			$idPlayer[] = array($value['id'],$value['name']);
+		}
 	}
 }
 
-echo '<table><tr><td>Joueurs</td>';
+echo '<table><tr><td></td><td>Joueurs</td>';
 
 for($i=1;$i<8;$i++){
 	echo '<th>G '.$i.'</th>';
 }
 echo '</tr>';
+	$count = 0;
 	foreach ($idPlayer as $keyPlayer => $valuePlayer) {
+		$count++;
 		echo '<tr>';
-		echo '<th>'.$idPlayer[$keyPlayer][1].' </th> ';
+		echo '<td>'.$count.'</td>';
+		if($idPlayer[$keyPlayer][1]==$accountSelected){
+			echo '<th><font class="greenResult">'.$idPlayer[$keyPlayer][1].'</font> </th> ';
+		}
+		else{
+			echo '<th>'.$idPlayer[$keyPlayer][1].' </th> ';
+		}
 		$xmlPlayer = simplexml_load_file('https://s'.$serverNumber.'-fr.ogame.gameforge.com/api/playerData.xml?id='.$idPlayer[$keyPlayer][0]);
 		for($i=1;$i<8;$i++){
 			echo '<td><table>';
