@@ -67,14 +67,13 @@ foreach ($aMenu as $key => $value) {
 				<select name="account">
 					<?php
 					foreach ($aAccount as $key => $value) {
-						foreach ($aAccount[$key] as $subkey => $subvalue){
-							if($subvalue==$accountSelected){
-								echo '<option selected id="'.$key.'" value="'.$subvalue.'">'.$subvalue.' ['.$key.']</option>' ;
-							}
-							else{
-								echo '<option id="'.$key.'" value="'.$subvalue.'">'.$subvalue.' ['.$key.']</option>' ;
-							}
+						if($key==$accountSelected){
+							echo '<option selected id="'.$key.'" value="'.$key.'">'.$value[0].' ['.$value[1].']</option>' ;
 						}
+						else{
+							echo '<option id="'.$key.'" value="'.$key.'">'.$value[0].' ['.$value[1].']</option>' ;
+						}
+						
 					}
 					?>
 				</select>
