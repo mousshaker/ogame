@@ -26,6 +26,7 @@ $aAccount = array(
 	0=>array('Eanae','144',90,45),
 	1 =>array('Emphurio','144',90,45),
 	2 =>array('Emphurio','140',150,75),
+    3 =>array('Emphurio','OgamER',100000,50000),
 	);
 
 
@@ -65,9 +66,14 @@ $aPlanete = array(
 	8 => array('IabaI','[4:483:9]',1,$aAccount[1][1],'3','46','gf1.geo.gfsrv.net/cdn08/0cc75bf5cf156fc585372cf41a7508.png',$urlImgBg.'water.jpg','231','34',$aAccount[1][2],$aAccount[1][3]),
 	9 => array('Aibia','[4:483:13]',1,$aAccount[1][1],'3','-43','gf1.geo.gfsrv.net/cdnc4/e4be5926248e1e5402de26bfeb6965.png',$urlImgBg.'gas_14.jpg','169','16',$aAccount[1][2],$aAccount[1][3]),
 	2 => array('LagaL','[1:416:9]',1,$aAccount[1][1],'3','36','gf1.geo.gfsrv.net/cdn69/9ad60afcc1cffcb6870d31053f9eaf.png',$urlImgBg.'jungle_14.jpg','216','29',$aAccount[1][2],$aAccount[1][3]),
-	10 => array('YqY','[7:120:9]',0,$aAccount[0][1],'3','47','gf3.geo.gfsrv.net/cdn5f/9d6624c2c613cc59c18a39fc6f5ae6.png',$urlImgBg.'jungle_14_21.jpg','210','31',$aAccount[0][2],$aAccount[2][3]),
-	11 => array('PM','[1:344:6]',2,$aAccount[2][1],'5','51','gf3.geo.gfsrv.net/cdn5f/9d6624c2c613cc59c18a39fc6f5ae6.png',$urlImgBg.'jungle_14_21.jpg','210','31',$aAccount[2][2],$aAccount[2][3]),
+	10 => array('YqY','[7:120:9]',0,$aAccount[0][1],'3','47','gf3.geo.gfsrv.net/cdneb/0b4e5e7d10690282412502048a2f80.png',$urlImgBg.'jungle_14_21.jpg','210','31',$aAccount[0][2],$aAccount[2][3]),
+	11 => array('UnanU','[7:20:9]',2,$aAccount[2][1],'5','44','gf3.geo.gfsrv.net/cdneb/0b4e5e7d10690282412502048a2f80.png',$urlImgBg.'jungle_14_21_31.jpg','216','30',$aAccount[2][2],$aAccount[2][3]),
+	12 => array('LoliloL','[7:20:8]',2,$aAccount[2][1],'5','51','gf2.geo.gfsrv.net/cdn44/219a946936fb8962f25653fb6fe4cd.png',$urlImgBg.'jungle.jpg','243','31',$aAccount[2][2],$aAccount[2][3]),
+	13 => array('MooM','[7:20:7]',2,$aAccount[2][1],'5','49','gf2.geo.gfsrv.net/cdnd4/63f1df035da1b8ca6a1229dfcbf8cc.png',$urlImgBg.'normal.jpg','217','31',$aAccount[2][2],$aAccount[2][3]),
+	14 => array('AvA','[7:19:9]',2,$aAccount[2][1],'5','60','gf3.geo.gfsrv.net/cdne9/4176dad1705e1d32e0e10624f3b5a9.png',$urlImgBg.'water.jpg','233','33',$aAccount[2][2],$aAccount[2][3]),
+    15 => array('AvA','[4:183:9]',3,$aAccount[3][1],'100','60','gf3.geo.gfsrv.net/cdne9/4176dad1705e1d32e0e10624f3b5a9.png',$urlImgBg.'water.jpg','233','33',$aAccount[3][2],$aAccount[3][3]),
 	);
+
 # $aPlanete = array(array(NomPlanete,Coordonnées,nomJoueur,Serveur,Vitesse Prod,TempMax,urlImage,nbCase,prodSatellite,baseMetal, baseCristal))
 # pour récupérer l'url de l'image d'une planète, faites un clic droit sur la planète puis "inspecter l'élément"
 # ce tableau regroupe en un seul endroit tous les comptes que vous pouvez avoir. Renseignez donc bien le serveur, la vitesse éventuel du serveur ainsi que votre nom de joueur sur le serveur

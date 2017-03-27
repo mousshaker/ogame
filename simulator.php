@@ -618,7 +618,7 @@ foreach ($aMenu as $key => $value) {
 		</div>
 
 		<div class="footer">
-			@Mousshk - 2016
+            <a href="http://sulfehn.free.fr/yoalad" target="_blank">@YOALAD</a> - <?php echo date(Y); ?>
 		</div>
 	</div>
 </body>
